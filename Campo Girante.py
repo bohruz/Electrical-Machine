@@ -78,7 +78,7 @@ def main():
             create_arrow(field, color, name)
 
     ani = animation.FuncAnimation(fig, animate, interval=20, frames=100)
-    ani.save("./Assets/Campo.gif")
+    ani.save("Campo-Girante.gif")
     plt.show()
 
 
