@@ -10,16 +10,16 @@ def main():
 
     def B1(w, t, phase):
 
-        return np.sin(w * t + phase) * (np.cos(phase) + 1j * np.sin(phase))
+        return np.sin(w * t) * (np.cos(phase) + 1j * np.sin(phase))
 
     def B2(w, t, phase):
 
-        return np.sin(w * t + phase) * \
+        return np.sin(w * t - 2 * np.pi/3) * \
             (np.cos(phase) + 1j * np.sin(phase))
 
     def B3(w, t, phase):
 
-        return np.sin(w * t + phase) * \
+        return np.sin(w * t + 2 * np.pi/3) * \
             (np.cos(phase) + 1j * np.sin(phase))
 
     def create_arrow(B, color, name):
@@ -78,7 +78,7 @@ def main():
             create_arrow(field, color, name)
 
     ani = animation.FuncAnimation(fig, animate, interval=20, frames=100)
-    ani.save("Campo-Girante.gif")
+    # ani.save("Campo-Girante.gif")
     plt.show()
 
 
